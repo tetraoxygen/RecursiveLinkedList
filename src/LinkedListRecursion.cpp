@@ -144,6 +144,7 @@ int main() {
   std::cout << "First, Last, First: ";
   numList.printFirstLastFirst();
 
+  std::cout << "The smallest number in the list is: " << numList.getSmallestItem() << std::endl;
   return 0;
 }
 
