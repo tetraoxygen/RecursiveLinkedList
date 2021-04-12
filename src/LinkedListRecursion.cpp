@@ -95,6 +95,22 @@ public:
       printFirstLastFirst(current->next);
     }
   }
+  
+  /**
+  * finds the smallest item in the list
+  * @return the smallest item in the list
+  */
+  int getSmallestItem(Node* current = nullptr) {
+    if (current == nullptr) {
+      current = head;
+    }
+    
+    if (current->next == nullptr || current->data < getSmallestItem(current->next)) {
+      return current->data;
+    } else {
+      return getSmallestItem(current->next);
+    }
+  }
 
 private:
   Node* head;
