@@ -2,16 +2,16 @@ cmake_minimum_required(VERSION 3.16)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-project(main)
+project(LinkedListRecursion)
 
-add_executable(main src/main.cpp)
+add_executable(LinkedListRecursion src/LinkedListRecursion.cpp)
 
-set_property(TARGET main PROPERTY CXX_STANDARD 14)
+set_property(TARGET LinkedListRecursion PROPERTY CXX_STANDARD 14)
 
-install(TARGETS main)
+install(TARGETS LinkedListRecursion)
 
 IF (WIN32 AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-	target_link_libraries(main -static)
+	target_link_libraries(LinkedListRecursion -static)
 ENDIF()
 
 if (MSVC)
